@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+<nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+    <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+            <a class="nav-link" href="/">Home Page</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/data_prep">Stock Pairs</a>
+        </li>        
+        <li class="nav-item">
+            <a class="nav-link" href="/build_model">Building Model</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/back_test">Back Testing</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/trade_analysis">Trading Analysis</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/real_trade">Real Trading</a>
+        </li>
+    </ul>
+</nav>
+
+<main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+    <h2>Back Testing</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Ticker1</th>
+                <th>Ticker2</th>
+                <th>Score</th>
+                <th>Profit_Loss</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for pair in pair_list %}
+            <tr>
+                <td> {{pair.Ticker1}}</td>
+                <td> {{pair.Ticker2}}</td>
+                <td> {{pair.Score}}</td>
+                <td> {{pair.Profit_Loss}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</main>
+{% endblock %}

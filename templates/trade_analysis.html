@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+<nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+    <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+            <a class="nav-link" href="/">Home Page</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/data_prep">Stock Pairs</a>
+        </li>        
+        <li class="nav-item">
+            <a class="nav-link" href="/build_model">Building Model</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/back_test">Back Testing</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/trade_analysis">Trading Analysis</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/real_trade">Real Trading</a>
+        </li>
+    </ul>
+</nav>
+
+<main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+    <h2>Trading Analysis</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Profit</th>
+                <th>Total_Trades</th>
+                <th>Profit_Trades</th>
+                <th>Loss_Trades</th>
+                <th>Maximum_Drawdown</th>
+                <th>Sharpe_ratio</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for trade in trade_list %}
+            <tr>
+                <td> {{trade.Profit}}</td>
+                <td> {{trade.Total_Trades}}</td>
+                <td> {{trade.Profit_Trades}}</td>
+                <td> {{trade.Loss_Trades}}</td>
+                <td> {{trade.Max_Drawdown}}</td>
+                <td> {{trade.Sharpe}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <img src="{{ url_for('static', filename='plots/backtest_pnl.jpg') }}" alt="Backtesting PnL">
+</main>
+{% endblock %}

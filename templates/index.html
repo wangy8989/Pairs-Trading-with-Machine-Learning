@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+<nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+    <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+            <a class="nav-link active" href="/">Home Page</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/data_prep">Stock Pairs</a>
+        </li>        
+        <li class="nav-item">
+            <a class="nav-link" href="/build_model">Building Model</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/back_test">Back Testing</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/trade_analysis">Trading Analysis</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/real_trade">Real Trading</a>
+        </li>
+    </ul>
+</nav>
+
+<main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+    <div class="jumbotron">
+        <div class="container">
+            <h2 class="display-5">Pairs Trading with Machine Learning</h2>
+            <P> 
+                This project uses Machine Learning methods to group assets based on similar factor loadings, 
+                then identifies pairs within each cluster to implement pairs trading strategy. 
+                Pairs are then constructed into a market-neutral portfolio.
+            </P>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Machine Learning Methods</h3>
+                <P>
+                    Apply Principal Component Analysis(PCA) to reduce the dimension of the returns data and factor(Indsutry) data,
+                    then group stocks using DBSCAN clustering.
+                </P>
+            </div>
+            <div class="col-md-4">
+                <h3>Finding Pairs</h3>
+                <P>
+                    Run cointegration test(ADF test on stationarity of residual) on each pair in each cluster. Get the most cointegrated pair.
+                </P>
+            </div>
+            <div class="col-md-4">
+                <h3>Trading Logic</h3>
+                <P>
+                    Trade on residuals of pair prices. Then apply bollinger band strategy: 
+                    If the residual just crosses below lower band, long; if the residual crosses above higher band, short; 
+                    otherwise, hold on to current position.
+                </P>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
