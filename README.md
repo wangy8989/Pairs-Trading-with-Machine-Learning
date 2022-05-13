@@ -26,11 +26,11 @@ It also implements a distributed Python platform that can be used to test quanti
 * templates for flask are in "templates" folder; 
 * "static" folder has PnL plots.
 
+**Download "Capstone_Final_Yicheng_Wang.rar" if you want to run the project (with codes, data and video instruction).**
+
 Instructions:
-1. Run "platform_server.py";
+1. In "Program" folder, run "platform_server.py";
 2. Open another console and run "platform_client.py";
 3. Open web browser and go to "http://127.0.0.1:5000/", then home page will show;
 4. Click "Stock Pairs" -> "Building Model" -> "Back Testing" -> "Trading Analysis" -> "Real Trading" in order;
 video instructions are in "video_flask" for web browser and "video_program" for running program.
-
-Please refer to "Capstone_Final_Yicheng_Wang.rar" for complete files and data.
