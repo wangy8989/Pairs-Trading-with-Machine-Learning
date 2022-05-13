@@ -1,13 +1,24 @@
 # Pairs-Trading-with-Machine-Learning
 
-Notebook file: implement strategy on SP500
-1. Implemented PCA and DBSCAN clustering to group SP500 stocks based on similar factor loadings  
-2. Identified pairs within clusters to implement dollar neutral Bollinger Band pairs trading strategy  
-3. Constructed portfolio with pairs equally weighted  
-Result: This portfolio achieved has a 2.5 Sharpe ratio and 25% annual return in 2018.
+Notebook file: implement strategy on Russell3000  
+
+It implements the Pairs Trading strategy with Machine Learning to find the most profitable portfolio. 
+The idea is based on the stocks that share loadings to common factors in the past should be related in the future.
+We used Russell 3000 as our project data. 
+The information we retrieved contains daily prices of stocks, Global Industry Classification Standard (GICS), analyst rating, market to book value, return on asset, debt to asset, EPS, and market cap.  
+
+Result: the best model with tuned hyperparameters achieved Sharpe ratio 1.54559.
 
 ## Pairs-Trading-with-Machine-Learning-on-Distributed-Python-Platform
-PY files: implement strategy on Russell3000  
+
+PY files: implement strategy on SP500  
+
+Strategy:
+1. Implemented PCA and DBSCAN clustering to group stocks based on similar factor loadings  
+2. Identified pairs within clusters to implement dollar neutral Bollinger Band pairs trading strategy  
+3. Constructed portfolio with pairs equally weighted  
+Result: This portfolio achieved has a 2.5 Sharpe ratio and 25% annual return in 2018.  
+
 It also implements a distributed Python platform that can be used to test quantitative models for trading financial instruments in a network setting under client/server infrastructure. 
 
 * Codes are in "platform_server.py" and "platform_client.py"; 
