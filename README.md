@@ -7,16 +7,14 @@ The idea is based on the stocks that share loadings to common factors in the pas
 We used Russell 3000 as our project data from 2010 to 2018 from Bloomberg. 
 The information we retrieved contains daily prices of stocks, Global Industry Classification Standard (GICS), analyst rating, market to book value, return on asset, debt to asset, EPS, and market cap.  
 
-Result: the best model with tuned hyperparameters achieved Sharpe ratio 1.54559.
+Result: the best model with tuned hyperparameters achieved Sharpe ratio 1.55.
 
 ## Pairs-Trading-with-Machine-Learning-on-Distributed-Python-Platform
 
 This project implements a distributed Python platform that can be used to test quantitative models for trading financial instruments in a network setting under client/server infrastructure. Normally, we backtest locally using past historical data to check the performance of our trading strategies. The performance result, in this case, is usually an illusion of what the actual performance is in real-time trading. We also show in this paper this conclusion by showing that our quantitative trading model performs much worse in the simulated trading than that in backtesting environment. Therefore, we build this Python platform not only for implementing trading strategies and backtesting them historically but also for simulating trades similar to what is in real market, acting as another control before real-time trading.
 
-PY files: implement strategy on SP500  
-
 Strategy:
-1. Implemented PCA and DBSCAN clustering to group stocks based on similar factor loadings  
+1. Implemented PCA and DBSCAN clustering to group SP500 stocks based on similar factor loadings  
 2. Identified pairs within clusters to implement dollar neutral Bollinger Band pairs trading strategy  
 3. Constructed portfolio with pairs equally weighted  
 
