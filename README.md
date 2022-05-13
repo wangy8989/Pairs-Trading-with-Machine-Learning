@@ -6,10 +6,10 @@ Notebook file:
 3. Constructed portfolio with pairs equally weighted  
 Result: This portfolio achieved has a 2.5 Sharpe ratio and 25% annual return in 2018.
 
-In "Program" folder, codes are in "platform_server.py" and "platform_client.py"; database is "pairs_trading.db"; templates for flask are in "templates" folder; "static" folder has PnL plots.
+Codes are in "platform_server.py" and "platform_client.py"; database is "pairs_trading.db"; templates for flask are in "templates" folder; "static" folder has PnL plots.
 
 Instructions:
-1. In "Program" folder, run "platform_server.py";
+1. Run "platform_server.py";
 2. Open another console and run "platform_client.py";
 3. Open web browser and go to "http://127.0.0.1:5000/", then home page will show;
 4. Click "Stock Pairs" -> "Building Model" -> "Back Testing" -> "Trading Analysis" -> "Real Trading" in order;
