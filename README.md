@@ -6,7 +6,7 @@ Notebook file: implement strategy on SP500
 3. Constructed portfolio with pairs equally weighted  
 Result: This portfolio achieved has a 2.5 Sharpe ratio and 25% annual return in 2018.
 
-## Pairs-Trading-with-Machine-Learning-on-Distributed-Platform
+## Pairs-Trading-with-Machine-Learning-on-Distributed-Python-Platform
 PY files: implement strategy on Russell3000  
 It also implements a distributed Python platform that can be used to test quantitative models for trading financial instruments in a network setting under client/server infrastructure. 
 
