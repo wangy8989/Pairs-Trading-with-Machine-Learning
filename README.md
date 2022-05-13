@@ -1,12 +1,17 @@
 # Pairs-Trading-with-Machine-Learning
 
-Notebook file:
+Notebook file: implement strategy on SP500
 1. Implemented PCA and DBSCAN clustering to group SP500 stocks based on similar factor loadings  
 2. Identified pairs within clusters to implement dollar neutral Bollinger Band pairs trading strategy  
 3. Constructed portfolio with pairs equally weighted  
 Result: This portfolio achieved has a 2.5 Sharpe ratio and 25% annual return in 2018.
 
-Codes are in "platform_server.py" and "platform_client.py"; database is "pairs_trading.db"; templates for flask are in "templates" folder; "static" folder has PnL plots.
+PY files: implement strategy on Russell3000 and simulate on distributed platform
+
+* Codes are in "platform_server.py" and "platform_client.py"; 
+* database is "pairs_trading.db"; 
+* templates for flask are in "templates" folder; 
+* "static" folder has PnL plots.
 
 Instructions:
 1. Run "platform_server.py";
