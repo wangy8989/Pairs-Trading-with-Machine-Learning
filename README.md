@@ -15,5 +15,4 @@ Instructions:
 4. Click "Stock Pairs" -> "Building Model" -> "Back Testing" -> "Trading Analysis" -> "Real Trading" in order;
 video instructions are in "video_flask" for web browser and "video_program" for running program.
 
-Please refer to here for data:
-https://github.com/wangy8989/Pairs-Trading-with-Machine-Learning-on-Distributed-Python-Platform/blob/master/Capstone_Final_Yicheng_Wang.rar
+Please refer to "Capstone_Final_Yicheng_Wang.rar" for complete files and data.
