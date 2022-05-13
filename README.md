@@ -4,7 +4,7 @@ Notebook file: implement strategy on Russell3000
 
 It implements the Pairs Trading strategy with Machine Learning to find the most profitable portfolio. 
 The idea is based on the stocks that share loadings to common factors in the past should be related in the future.
-We used Russell 3000 as our project data. 
+We used Russell 3000 as our project data from 2010 to 2018 from Bloomberg. 
 The information we retrieved contains daily prices of stocks, Global Industry Classification Standard (GICS), analyst rating, market to book value, return on asset, debt to asset, EPS, and market cap.  
 
 Result: the best model with tuned hyperparameters achieved Sharpe ratio 1.54559.
